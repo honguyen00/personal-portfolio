@@ -1,0 +1,304 @@
+/* Declare all variables for later use */
+:root {
+    --blue:#24565A;
+    --gray: #D4DEDF;
+    --brown: #A36041;
+    --outer-space: #33393f;
+    --bright-turquoise: #2aefcb;
+    --purple: #820AF2;
+    --black: #314347;
+    --gold: #EBC799;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+/* styling for when text is selected */
+::selection {
+    background-color: var(--bright-turquoise);
+    color: var(--outer-space);
+}
+
+/* =========================================================== */
+/* set up font for the whole site */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--blue);
+    background-color: var(--gray);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1 {
+    font-size: 5rem;
+    color: var(--gold);
+    padding-left: 10rem;
+    background-color: var(--brown);
+    transition: all 0.5s ease-in;
+}
+
+h2 {
+    font-size: 3.5rem;
+    color: var(--black);
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+/* =================================================================== */
+/* header and navigation bar
+============================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    text-align: center;
+    background-image: linear-gradient(293deg, var(--blue) 20%, var(--black) 80%);
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all 0.5s ease-in;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--gold);
+    font-size: 3rem;
+    margin-right: 5rem;
+}
+
+nav a:hover {
+    color: var(--gray);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* hero banner with avatar and subtitle
+==========================================*/
+.hero-banner {
+    background-image: url(../images/background-image3.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    display: inline-block;
+    max-height: 15rem;
+    border-radius: 160px;
+    margin: 1rem 2rem 1rem 2rem;
+}
+
+/* main container with about, work and contact section
+==============================================================*/
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10rem;
+    padding-left: 5rem;
+}
+
+.main-section {
+    display: flex;
+    margin: 3rem 0;
+}
+
+.main-section h3 {
+    flex: 0 0 20rem;
+    padding-right: 1rem;
+    text-align: right;
+    border-right: 4px solid var(--outer-space);
+}
+
+#about div, #contact div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-left: 3rem;
+}
+/* ================================================
+Work Section 
+================================================== */
+
+.work-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 3rem;
+    width: 100%;
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+.work-item {
+    border: 4px solid var(--blue);
+    z-index: 0;
+}
+
+.code-snippet {
+    background-image: url(../images/code-snippet.png); 
+    background-size: contain;
+    width: 100%;
+    height: 36rem;
+}
+
+.code-refactor {
+    background-image: url(../images/code-refactor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.code1, .code2, .code3 {
+    background-color: var(--outer-space);
+}
+
+.code1, .code2, .code3, .code-refactor {
+    flex: 1 0 48%;
+    height: 18rem;
+}
+
+.blur-effect {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+    position: relative;
+}
+
+.blur-effect:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.blur-effect div {
+    padding: 1rem;
+    position: absolute;
+    bottom: 20%;
+    background-color: var(--blue);
+    color: var(--gray);
+}
+
+/* ================================================
+Contact Section 
+================================================== */
+address {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 15rem;
+}
+
+address a {
+    color: var(--purple);
+    font-size: 3rem;
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+}
+
+address a:hover {
+    font-style: oblique;
+    font-weight: bold;
+}
+
+/* Responsive design for tablet screen size */
+
+@media screen and (max-width: 992px) {
+    header {
+        padding: 0;
+    }
+    h1 {
+        margin: 0;
+        flex: 0 0 100%;
+        text-align: center;
+        padding: 0;
+    }
+    nav {
+        flex-grow: 1;
+        justify-content: space-around;
+    }
+    nav a {
+        margin: 0;
+    }
+    .main-section h3 {
+        flex: 0 0 20rem;
+        max-width: 20rem;
+    }
+    address {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Responsive design for mobile screen size */
+
+@media screen and (max-width: 768px) {
+    nav a {
+        flex: 1 0 50%;
+        font-size: 2rem;
+    }
+    .hero-banner h2 {
+        font-size: 2.5rem;
+    }
+    .main-container {
+        padding: 0 3rem;
+    }
+    .main-section {
+        display: block;
+        margin: 1rem 0;
+    }
+    .main-section h3 {
+        max-width: 100%;
+        border-right: none;
+        margin-bottom: 1rem;
+        text-align: left;
+        padding: 0;
+    }
+    #about div, #contact div, .work-container {
+        padding: 0;
+        margin-left: 0;
+    }
+    address {
+        flex-direction: row;
+        justify-content:flex-start;
+        column-gap: 2rem;
+    }
+    address a{
+        font-size: 2rem;
+    }
+    .code1, .code2, .code3, .code-refactor {
+        height: 10rem;
+    }
+    .code-snippet {
+        height: 20rem;
+    }
+}
