@@ -1,11 +1,12 @@
 /* Declare all variables for later use */
 :root {
     --blue:#24565A;
+    --east-bay:#4C537D;
     --gray: #D4DEDF;
     --brown: #A36041;
     --outer-space: #33393f;
     --bright-turquoise: #2aefcb;
-    --purple: #820AF2;
+    --purple: #A031E9;
     --black: #314347;
     --gold: #EBC799;
     --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -60,16 +61,16 @@ h3 {
 }
 
 h4 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 p {
-    margin-bottom: 1rem;
-    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
 }
-/* =================================================================== */
-/* header and navigation bar
-============================== */
+/* ===================================================================
+    Header and navigation bar
+================================================ */
 header {
     display: flex;
     justify-content: space-between;
@@ -101,7 +102,8 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* hero banner with avatar and subtitle
+/* ========================================== 
+    Hero banner with avatar and subtitle
 ==========================================*/
 .hero-banner {
     background-image: url(../images/background-image3.jpg);
@@ -117,7 +119,8 @@ nav a:hover {
     margin: 1rem 2rem 1rem 2rem;
 }
 
-/* main container with about, work and contact section
+/*===================================================================== 
+    Main container with about, work and contact section
 ==============================================================*/
 .main-container {
     display: flex;
@@ -138,16 +141,16 @@ nav a:hover {
     border-right: 4px solid var(--outer-space);
 }
 
+/* About section
+====================================== */
+
 #about div, #contact div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 100%;
     margin-left: 3rem;
 }
-/* ================================================
-Work Section 
-================================================== */
+
+/* Work Section 
+=================================== */
 
 .work-container {
     display: flex;
@@ -162,6 +165,7 @@ Work Section
 .work-item {
     border: 4px solid var(--blue);
     z-index: 0;
+    border-radius: 1rem;
 }
 
 .code-snippet {
@@ -186,10 +190,12 @@ Work Section
     height: 18rem;
 }
 
+/* styling for blur effect on each work and blur effect reduce on hover */
 .blur-effect {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
     z-index: 1;
     position: relative;
 }
@@ -206,8 +212,7 @@ Work Section
     color: var(--gray);
 }
 
-/* ================================================
-Contact Section 
+/* Contact Section 
 ================================================== */
 address {
     display: flex;
@@ -220,19 +225,19 @@ address {
 address a {
     color: var(--purple);
     font-size: 3rem;
-    font-style: normal;
-    text-decoration: underline;
-    text-decoration-color: var(--blue);
 }
 
 address a:hover {
-    font-style: oblique;
-    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: var(--east-bay);
 }
 
-/* Responsive design for tablet screen size */
 
+/*=================================================== 
+Responsive design for tablet screen size 
+=======================================================*/
 @media screen and (max-width: 992px) {
+    /* header */
     header {
         padding: 0;
     }
@@ -242,6 +247,7 @@ address a:hover {
         text-align: center;
         padding: 0;
     }
+    /* nav bar */
     nav {
         flex-grow: 1;
         justify-content: space-around;
@@ -249,6 +255,7 @@ address a:hover {
     nav a {
         margin: 0;
     }
+    /* main content */
     .main-section h3 {
         flex: 0 0 20rem;
         max-width: 20rem;
@@ -259,16 +266,22 @@ address a:hover {
     }
 }
 
-/* Responsive design for mobile screen size */
 
+
+/* ========================================
+ Responsive design for mobile screen size 
+ ===================================================*/
 @media screen and (max-width: 768px) {
+    /* nav bar */
     nav a {
         flex: 1 0 50%;
         font-size: 2rem;
     }
+    /* hero banner */
     .hero-banner h2 {
         font-size: 2.5rem;
     }
+    /* main content */
     .main-container {
         padding: 0 3rem;
     }
