@@ -13,5 +13,4 @@ N/a
 Demo of my website:
 ![Demo of the website](assets/images/demo.png) 
 
-You can use the navigation bar to navigate through the content. To view the live site of my work, just need to click on the project that seems interesting to you. <br />
-Thank you for checking my work!
+You can use the navigation bar to navigate through the content. To view the live site of my work, just click on the project that seems interesting to you and you will direct to the website.
