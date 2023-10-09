@@ -168,11 +168,27 @@ nav a:hover {
     border-radius: 1rem;
 }
 
+.map-parking {
+    background-image: url(../images/map-parking-demo.png);
+    background-repeat: no-repeat; 
+    background-size:cover;
+    height: 36rem;
+    flex-basis: 100%;
+}
+
+.weather-forecast {
+    background-image: url(../images/weather-forecast-demo.png);
+}
+
+.daily-planner {
+    background-image: url(../images/daily-planner-demo.png);
+    background-size: contain;
+}
+
+
 .code-snippet {
     background-image: url(../images/code-snippet.png); 
     background-size: contain;
-    width: 100%;
-    height: 36rem;
 }
 
 .code-refactor {
@@ -181,11 +197,7 @@ nav a:hover {
     background-size: cover;
 }
 
-.code1, .code2, .code3 {
-    background-color: var(--outer-space);
-}
-
-.code1, .code2, .code3, .code-refactor {
+.small-code {
     flex: 1 0 48%;
     height: 18rem;
 }
@@ -224,7 +236,7 @@ address {
 
 address a {
     color: var(--purple);
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 address a:hover {
