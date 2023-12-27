@@ -199,7 +199,7 @@ nav a:hover {
 
 .small-code {
     flex: 1 0 48%;
-    height: 18rem;
+    height: 20rem;
 }
 
 /* styling for blur effect on each work and blur effect reduce on hover */
@@ -262,7 +262,8 @@ Responsive design for tablet screen size
     /* nav bar */
     nav {
         flex-grow: 1;
-        justify-content: space-around;
+        justify-content: center;
+        flex-direction: column;
     }
     nav a {
         margin: 0;
@@ -284,11 +285,7 @@ Responsive design for tablet screen size
  Responsive design for mobile screen size 
  ===================================================*/
 @media screen and (max-width: 768px) {
-    /* nav bar */
-    nav a {
-        flex: 1 0 50%;
-        font-size: 2rem;
-    }
+    
     /* hero banner */
     .hero-banner h2 {
         font-size: 2.5rem;
@@ -319,11 +316,5 @@ Responsive design for tablet screen size
     }
     address a{
         font-size: 2rem;
-    }
-    .code1, .code2, .code3, .code-refactor {
-        height: 10rem;
-    }
-    .code-snippet {
-        height: 20rem;
     }
 }
